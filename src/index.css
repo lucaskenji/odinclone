@@ -1,13 +1,36 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai&display=swap');
+
+.loading-screen {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ebeff0;
+  display: flex;
+  flex-direction: column;
+  -moz-flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Hind Madurai', Arial, sans-serif !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.loading-spinner {
+  animation-name: spinLoading;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  color: #1877f2;
+}
+
+@keyframes spinLoading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
 }
